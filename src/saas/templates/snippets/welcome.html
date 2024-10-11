@@ -1,0 +1,10 @@
+<div>
+    {% if request.user.is_authenticated %}
+    Welcome {{ request.user.username }}
+    {% else %}
+    You are not logged in
+    {% endif %}
+</div>
+<div>
+    
+</div>

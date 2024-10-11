@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %} {{ block.super }} | {{title}}{% endblock %}
+
+{% block header %}
+    <p>This is the Header for the Home Page</p>
+{% endblock %}
+
+{% block content %}
+    <p>This is purely the Home Page, not the base page.</p>
+    <p>views:{{queryset.count}}</p>
+    {% include 'snippets/welcome.html' %}
+
+
+{% endblock %}
+
+
+
+<!-- 
+
+{% block footer %}
+<p>&copy; 2023 SAAS DJANGO. All rights reserved.</p>
+{% endblock %}
+
+{% block head %}
+{{ block.super }}
+<link rel="stylesheet" href="styles.css">
+{% endblock %}
+
+{% block body %}
+{{ block.super }}
+
+
+{% endblock %}
